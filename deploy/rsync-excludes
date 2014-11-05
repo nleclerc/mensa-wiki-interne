@@ -1,0 +1,12 @@
+/config
+/logs
+/deploy
+.git
+.gitignore
+.DS_Store
+.editorconfig
+*.mwb
+*.bak
+*.log
+ga.js
+
