@@ -18,6 +18,7 @@ class auth_plugin_authlemonldap extends DokuWiki_Auth_Plugin {
 		global $conf;
 
 		$this->cando['external'] = true;
+		$this->cando['logout'] = false;
 	}
 
 	public function trustExternal($user,$pass,$sticky=false) {
@@ -60,9 +61,5 @@ class auth_plugin_authlemonldap extends DokuWiki_Auth_Plugin {
 			'mail' => $headers['User-Email'],
 			'grps' => $groups,
 		];
-	}
-
-	public function logOff() {
-		header('Location: /logout');
 	}
 }
