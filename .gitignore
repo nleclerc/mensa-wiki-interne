@@ -13,8 +13,6 @@ logs/
 
 deploy/*.conf
 
-htdocs/conf/dokuwiki.php
-
 #htdocs/data/**/*
 htdocs/data/attic/*
 htdocs/data/cache/*

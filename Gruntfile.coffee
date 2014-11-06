@@ -104,13 +104,7 @@ module.exports = (grunt)->
 			server:
 				path: 'http://localhost:<%= connect.options.port %>'
 
-		symlink:
-			config:
-				dest: 'htdocs/conf/dokuwiki.php'
-				relativeSrc: '../../config/dokuwiki.php'
-
 	grunt.registerTask 'serve', [
-		'symlink:config'
 		'connect:livereload'
 		'open'
 		'watch'
