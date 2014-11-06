@@ -20,6 +20,7 @@ htdocs/data/cache/*
 htdocs/data/index/*
 htdocs/data/locks/*
 htdocs/data/media/*
+htdocs/data/meta/*
 htdocs/data/media_attic/*
 htdocs/data/media_meta/*
 htdocs/data/pages/*
