@@ -9,6 +9,7 @@ config/*.php
 logs/
 *.log
 *.swp
+*.bak
 
 deploy/*.conf
 
