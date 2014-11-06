@@ -8,5 +8,4 @@
 # Date: Thu, 06 Nov 2014 00:10:16 +0000
 *	@ALL	1
 *	@member	8
-bac_a_sable	@ALL	2
 bac_a_sable:*	@ALL	16
