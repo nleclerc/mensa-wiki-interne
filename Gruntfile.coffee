@@ -30,10 +30,25 @@ rwGateway =  (dir)->
 	gateway_rw require('path').resolve(dir),
 		ignoreExistingFiles: true
 		rules: [
-			rule: '^/.*$'
+			rule: '^_media/(.*)'
 			cgi:  localconfig.phpCgiPath
-			to:   '/index.php'
-			query: 'q={{URI}}&{{QUERY}}'
+			to:   '/lib/exe/fetch.php'
+			query: 'media={{$1}}&{{QUERY}}'
+		,
+			rule: '^_detail/(.*)'
+			cgi:  localconfig.phpCgiPath
+			to:   '/lib/exe/detail.php'
+			query: 'media={{$1}}&{{QUERY}}'
+		,
+			rule: '^_export/([^/]+)/(.*)'
+			cgi:  localconfig.phpCgiPath
+			to:   '/doku.php'
+			query: 'do=export_{{$1}}&id={{$2}}&{{QUERY}}'
+		,
+			rule: '(.*)'
+			cgi:  localconfig.phpCgiPath
+			to:   '/doku.php'
+			query: 'id={{$1}}&{{QUERY}}'
 		]
 
 gatewayMiddleware = (dir)->
@@ -80,7 +95,7 @@ module.exports = (grunt)->
 							headerMiddleware
 							corsMiddleware
 							lrSnippet
-							# rwGateway(CONFIG.public)
+							rwGateway(CONFIG.public)
 							gatewayMiddleware CONFIG.public
 							mountFolder(connect, CONFIG.public)
 						]
