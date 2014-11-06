@@ -1,0 +1,7 @@
+base   authlemonldap
+author Nicolas Leclerc
+email  nl@spirotron.fr
+date   2014-11-06
+name   LemonLDAP Auth Plugin
+desc   Provides user authentication against the mensa france lemonldap instance.
+url    https://github.com/mensa-france/
