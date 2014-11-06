@@ -59,26 +59,6 @@ module.exports = (grunt)->
 	grunt.initConfig
 		config: CONFIG
 		watch:
-			coffee:
-				files: ['<%= yeoman.app %>/scripts/**/*.coffee']
-				tasks: ['newer:coffee:dist','version']
-
-			coffeeTest:
-				files: ['test/spec/**/*.coffee']
-				tasks: ['newer:coffee:test']
-
-			compass:
-				files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}']
-				tasks: ['compass:server']
-
-			styles:
-				files: ['<%= yeoman.app %>/styles/{,*/}*.css']
-				tasks: ['newer:copy:styles']
-
-			handlebars:
-				files: ['<%= yeoman.app %>/scripts/templates/**/*.hbs']
-				tasks: ['newer:handlebars:compile']
-
 			livereload:
 				options:
 					livereload: LIVERELOAD_PORT
