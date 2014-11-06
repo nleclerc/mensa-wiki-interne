@@ -28,9 +28,6 @@ htdocs/data/pages/*
 htdocs/data/tmp/*
 !htdocs/data/deleted.files
 !htdocs/data/security.png
-!htdocs/data/pages/dokwiki.txt
-!htdocs/data/pages/syntax.txt
-!htdocs/data/pages/welcome.txt
 
 !_dummy
 !.htaccess
