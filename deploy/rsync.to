@@ -29,6 +29,9 @@ if [[ $REPLY =~ ^[Yy]?$ ]]; then
 		exit 1
 	fi
 
+	echo "Touching local conf to clear cache (as per dokuwiki's recommendations)."
+	ssh $USERNAME@$HOST "touch $TARGET_PATH/htdocs/conf/local.php"
+
 	if [[ -z "$TARGET_GROUP" ]]; then
 		echo "No target group specified, skipping file group ownership change."
 	else
