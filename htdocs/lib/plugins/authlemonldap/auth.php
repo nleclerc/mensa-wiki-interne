@@ -53,8 +53,8 @@ class auth_plugin_authlemonldap extends DokuWiki_Auth_Plugin {
 		if ($headers['Is-Admin'])
 			$groups[] = 'admin';
 
-		if ($headers['Is-Blogger'])
-			$groups[] = 'blogger';
+		if ($headers['Is-Manager'])
+			$groups[] = 'Manager';
 
 		return [
 			'name' => $headers['User-Fullname'],

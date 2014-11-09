@@ -11,6 +11,7 @@ $conf['lang'] = 'fr';
 $conf['license'] = 'cc-zero';
 $conf['useacl'] = 1;
 $conf['superuser'] = '@admin';
+$conf['manager'] = '@manager';
 $conf['disableactions'] = 'register';
 $conf['mailguard'] = 'none';
 $conf['userewrite'] = '1';
