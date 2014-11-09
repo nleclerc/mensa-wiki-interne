@@ -23,7 +23,8 @@ headerMiddleware = (req, res, next)->
 	headers = JSON.parse fs.readFileSync(HEADER_CONFIG_FILE) # don't 'require' file to reload it on each request.
 
 	for key, value of headers
-		req.headers[key] = value
+		if value isnt null
+			req.headers[key] = value
 	next()
 
 rwGateway =  (dir)->
