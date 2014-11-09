@@ -25,10 +25,11 @@ class auth_plugin_authlemonldap extends DokuWiki_Auth_Plugin {
 		global $USERINFO;
 
 		$headers = getallheaders();
-		$userId = $headers['Auth-User'].':'.preg_replace('/\W*/','',$headers['User-Fullname']); # Show fullname in userid to
 
-		if (!$userId)
+		if (!isset($headers['Auth-User']))
 			return false;
+
+		$userId = $headers['Auth-User'].':'.preg_replace('/\W*/','',$headers['User-Fullname']); # Show fullname in userid to
 
 		$userData = $this->getUserData($userId);
 
@@ -54,7 +55,7 @@ class auth_plugin_authlemonldap extends DokuWiki_Auth_Plugin {
 			$groups[] = 'admin';
 
 		if ($headers['Is-Manager'])
-			$groups[] = 'Manager';
+			$groups[] = 'manager';
 
 		return [
 			'name' => $headers['User-Fullname'],
