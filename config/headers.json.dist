@@ -2,7 +2,7 @@
 	"Auth-User": 1234,
 	"Is-Member": 1,
 	"Is-Admin": 1,
-	"Is-Blogger": 1,
+	"Is-Responsable-National": 0,
 	"User-Fullname": "Joe Black",
 	"User-Email": "joe@example.com"
 }
